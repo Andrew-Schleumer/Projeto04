@@ -12,37 +12,19 @@ package br.com.fatecpg.quiz;
 public class Usuario {
 
     private String nome;
+    private String hora;
     private String media;
     private String tentativas;
+    private String nota;
 
-    public Usuario(String nome, String media, String tentativas) {
+    public Usuario(String nome, String hora, String media, String tentativas, String nota) {
         this.nome = nome;
+        this.hora = hora;
         this.media = media;
         this.tentativas = tentativas;
+        this.nota = nota;
     }
 
-    public String getNome() {
-        return nome;
-    }
-
-    public void setNome(String nome) {
-        this.nome = nome;
-    }
-
-    public String getMedia() {
-        return media;
-    }
-
-    public void setMedia(String media) {
-        this.media = media;
-    }
-
-    public String getTentativas() {
-        return tentativas;
-    }
-
-    public void setTentativas(String tentativas) {
-        this.tentativas = tentativas;
-    }
+    
 
 }

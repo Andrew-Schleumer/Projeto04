@@ -13,16 +13,22 @@
         <title>JSP Page</title>
     </head>
     <body>
+        <%@include file="WEB-INF/jspf/header.jspf" %>
+
         <div class="container">
-            <div class="row">
-                <div class="col-4">
-                    <form action="index.jsp">
-                    <div class="form-group">
-                        <label for="nome">Nome</label>
-                        <input type="text" class="form-control" id="nome" aria-describedby="emailHelp" placeholder="Nome">
-                    </div>
-                    <button type="submit" class="btn btn-primary">Submit</button>
-                </form>
+            <br> 
+            <div class="row d-flex justify-content-center">
+
+                <div class="col-3 border border-secondary rounded ">
+
+                    <form action="index.jsp" method="post">
+                        <div class="form-group">
+                            <label for="nome">Login</label>
+                            <input type="text" class="form-control" name="nome" placeholder="Nome">
+                        </div>
+                        <input type="submit" name="logar" class="btn btn-dark">
+                    </form>
+                    <br> 
                 </div>
             </div>
         </div>    
