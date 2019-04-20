@@ -5,26 +5,73 @@
  */
 package br.com.fatecpg.quiz;
 
+import java.util.Date;
+
 /**
  *
  * @author andre
  */
 public class Usuario {
 
-    private String nome;
-    private String hora;
-    private String media;
-    private String tentativas;
-    private String nota;
+    private Date data;
+    private double nota;
 
-    public Usuario(String nome, String hora, String media, String tentativas, String nota) {
-        this.nome = nome;
-        this.hora = hora;
-        this.media = media;
-        this.tentativas = tentativas;
+    public Usuario(Date data, double nota) {
+
+        this.data = data;
         this.nota = nota;
     }
 
-    
+    public Date getData() {
+        return data;
+    }
 
+    public void setData(Date data) {
+        this.data = data;
+    }
+
+    public double getNota() {
+        return nota;
+    }
+
+    public void setNota(double nota) {
+        this.nota = nota;
+    }
+    
+    public class Pessoa{
+        
+        private String nome;
+        private int tentativas;
+        private double notas;
+
+        public Pessoa(String nome, double notas) {
+            this.nome = nome;
+            this.notas = notas;
+        }
+
+        public String getNome() {
+            return nome;
+        }
+
+        public void setNome(String nome) {
+            this.nome = nome;
+        }
+
+        public int getTentativas() {
+            return tentativas;
+        }
+
+        public void setTentativas(int tentativas) {
+            this.tentativas = tentativas;
+        }
+
+        public double getNotas() {
+            return notas;
+        }
+
+        public void setNotas(double notas) {
+            this.notas = notas;
+        }
+        
+    }
 }

@@ -16,17 +16,34 @@
     </head>
     <body>
         <%@include file="WEB-INF/jspf/header.jspf"%>
+
+
+        <div class="container">
+            <h1>Quiz de Matemática</h1>
+            <div class="row"> 
+                <form action="index.jsp" class="form-group">
+                    <div class="form-check">
+                        <%for (Question q : Quiz.getMathTest()) {%>
+
+                        <h3><%=q.getQuestion()%></h3>
+                        <%for (String alternative : q.getAlternatives()) {%>
+                        <label>
+                            <input type="radio" name="<%=q.getQuestion()%>" value="<%=alternative%>">
+                            <%=alternative%>
+                        </label>
+
+                        <%}%>
+
+                        <%}%>
+
+                        <br><input type="submit" name="mathTest" value="Enviar" class="btn btn-dark">
+
+                    </div>
+                </form>
+            </div>
+        </div>
+
         <%@include file="WEB-INF/jspf/footer.jspf"%>
-        
-        <h1>Quiz de Matemática</h1>
-        <form action="index.jsp">
-            <%for (Question q : Quiz.getMathTest()) {%>
-            <h3><%=q.getQuestion()%></h3>
-                <%for (String alternative : q.getAlternatives()) {%>
-                    <input type="radio" name="<%=q.getQuestion()%>" value="<%=alternative%>" /> <%=alternative%><br/>
-                <%}%>
-            <%}%>
-            <input type="submit" name="mathTest" value="Enviar"/>
-        </form>
+
     </body>
 </html>

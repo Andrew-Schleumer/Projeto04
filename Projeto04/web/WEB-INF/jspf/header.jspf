@@ -1,16 +1,32 @@
 <%-- any content can be specified here e.g.: --%>
+<%@page import="br.com.fatecpg.quiz.Pontuacoes"%>
 <%@ page pageEncoding="UTF-8" %>
+
+<style>
+    html{ height:100%; }
+    body{ min-height:100%; padding:0; margin:0; position:relative; }
+
+    body::after{ content:''; display:block; height:100px; }
+
+    .footer {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        height: 50px;
+    }
+
+</style>
 
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <a class="navbar-brand" href="index.jsp">Projeto 4</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-    </button>
-
-
+    <span class="navbar-brand ml-auto text-light" method="POST">
+        <form class="form-inline my-2 my-lg-0" action="index.jsp">
+            <button class="btn btn-light my-2 my-sm-0 ml-auto" type="submit" name="apagar" value="apagar">Apagar Tabela</button>
+        </form>
+    </span>
     <%
         HttpSession sessao = request.getSession(true);
-        if(request.getParameter("nome") != null){
+        if (request.getParameter("nome") != null) {
             String nome = request.getParameter("nome");
             session.setAttribute("nome", nome);
         }
@@ -25,10 +41,8 @@
     <%} else {%>
     <span class="navbar-brand ml-auto text-light" method="POST">
         <form class="form-inline my-2 my-lg-0" action="autenticacao.jsp">
-        <button class="btn btn-light my-2 my-sm-0 ml-auto" type="submit">Logar</button>
-    </form>
+            <button class="btn btn-light my-2 my-sm-0 ml-auto" type="submit">Logar</button>
+        </form>
     </span>
     <%}%>
-
-
 </nav>
