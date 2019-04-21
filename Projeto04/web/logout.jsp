@@ -16,6 +16,7 @@
             if (session != null) {
                 session.invalidate();
             }
+
             response.sendRedirect("autenticacao.jsp");
         %>
     </body>

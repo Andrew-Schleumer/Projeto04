@@ -15,11 +15,12 @@ public class Usuario {
 
     private Date data;
     private double nota;
+    private String nome;
 
-    public Usuario(Date data, double nota) {
-
+    public Usuario(Date data, double nota, String nome) {
         this.data = data;
         this.nota = nota;
+        this.nome = nome;
     }
 
     public Date getData() {
@@ -37,41 +38,13 @@ public class Usuario {
     public void setNota(double nota) {
         this.nota = nota;
     }
-    
-    public class Pessoa{
-        
-        private String nome;
-        private int tentativas;
-        private double notas;
 
-        public Pessoa(String nome, double notas) {
-            this.nome = nome;
-            this.notas = notas;
-        }
-
-        public String getNome() {
-            return nome;
-        }
-
-        public void setNome(String nome) {
-            this.nome = nome;
-        }
-
-        public int getTentativas() {
-            return tentativas;
-        }
-
-        public void setTentativas(int tentativas) {
-            this.tentativas = tentativas;
-        }
-
-        public double getNotas() {
-            return notas;
-        }
-
-        public void setNotas(double notas) {
-            this.notas = notas;
-        }
-        
+    public String getNome() {
+        return nome;
     }
-}
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+    
+    }

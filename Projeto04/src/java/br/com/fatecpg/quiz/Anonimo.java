@@ -5,14 +5,15 @@
  */
 package br.com.fatecpg.quiz;
 
+import java.util.Date;
+
 /**
  *
  * @author andre
  */
 public class Anonimo {
     private double nota;
-    private String data;
-    private String hora;
+    private Date data;
 
     public double getNota() {
         return nota;
@@ -22,25 +23,17 @@ public class Anonimo {
         this.nota = nota;
     }
 
-    public String getData() {
+    public Date getData() {
         return data;
     }
 
-    public void setData(String data) {
+    public void setData(Date data) {
         this.data = data;
     }
-
-    public String getHora() {
-        return hora;
-    }
-
-    public void setHora(String hora) {
-        this.hora = hora;
-    }
-
-    public Anonimo(double nota, String data, String hora) {
+    
+    public Anonimo(double nota, Date data) {
         this.nota = nota;
         this.data = data;
-        this.hora = hora;
+        
     }
 }
