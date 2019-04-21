@@ -26,7 +26,7 @@
                             <label for="nome">Login</label>
                             <input type="text" class="form-control" name="nome" placeholder="Nome">
                         </div>
-                        <input type="submit" name="logar" class="btn btn-dark">
+                        <input type="submit" name="login" value="Login" class="btn btn-dark">
                     </form>
                     <br> 
                 </div>

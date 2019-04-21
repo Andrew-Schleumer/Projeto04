@@ -13,7 +13,9 @@
     </head>
     <body>
         <%
-            if (session != null) {
+             HttpSession sessao = request.getSession(false);
+             
+            if (sessao != null && sessao.getAttribute("nome") != null ) {
                 session.invalidate();
             }
 
